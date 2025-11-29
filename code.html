@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                        "foreground-light": "#1c180d",
+                        "foreground-dark": "#f8f8f5",
+                        "subtle-light": "#f4f0e7",
+                        "subtle-dark": "#3a362a",
+                        "muted-light": "#9c8749",
+                        "muted-dark": "#a8996b",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center px-4 sm:px-8 md:px-20 lg:px-40 py-5">
+<div class="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-subtle-light dark:border-subtle-dark px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4">
+<div class="size-6 text-foreground-light dark:text-foreground-dark">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.087 10.087L13.913 2.913a2.414 2.414 0 0 1 1.707 4.121c-1.38.74-2.923 1.83-4.484 3.39-2.27 2.27-3.79 4.312-4.596 5.86-1.38.74-2.923 1.83-4.484 3.39a2.414 2.414 0 0 1 1.707 4.121l7.174-7.174a2.414 2.414 0 0 1-4.121-1.707c.74-1.38 1.83-2.923 3.39-4.484 2.27-2.27 4.312-3.79 5.86-4.596 1.38-.74 2.923-1.83 4.484-3.39a2.414 2.414 0 0 1-4.121-1.707z M3.621 13.203c.04.018.232.07.72.015.61-.09 1.4-.39 2.296-.864 1.258-.6 2.65-1.54 4.095-2.985s2.385-2.837 2.985-4.095c.474-.895.774-1.685.864-2.296-.055-.488-.003-.68.015-.72a.5.5 0 0 0-.018-.04l-5.426 5.426-5.426 5.426a.5.5 0 0 0 .04.018zM14.95 5.364l5.426 5.426-5.426 5.426-5.426-5.426 5.426-5.426z m1.414-1.414L21.79 9.376a2.5 2.5 0 0 1-1.768 4.268l-5.426-5.426-5.426-5.426a2.5 2.5 0 0 1 4.268-1.768l5.426 5.426z M9.376 2.21a2.5 2.5 0 0 1 4.268 1.768L8.218 9.404l-5.426 5.426a2.5 2.5 0 0 1-1.768-4.268l5.426-5.426 2.926-2.926z"></path>
+</svg>
+</div>
+<h2 class="text-foreground-light dark:text-foreground-dark text-lg font-bold leading-tight tracking-[-0.015em]">Soperth</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-foreground-light dark:text-foreground-dark text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark text-sm font-medium leading-normal" href="#">Articles</a>
+<a class="text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark text-sm font-medium leading-normal" href="#">About</a>
+<a class="text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-muted-light dark:text-muted-dark flex bg-subtle-light dark:bg-subtle-dark items-center justify-center pl-3 rounded-l-lg">
+<span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-foreground-light dark:text-foreground-dark focus:outline-0 focus:ring-0 border-none bg-subtle-light dark:bg-subtle-dark h-full placeholder:text-muted-light dark:placeholder:text-muted-dark px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+</div>
+</header>
+<main>
+<!-- HeroSection -->
+<div class="py-10 sm:py-16 md:py-24">
+<div class="flex flex-col gap-6 px-4">
+<div class="flex flex-col gap-4 text-center">
+<h1 class="text-foreground-light dark:text-foreground-dark text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl">Curated Insights for the Modern Reader</h1>
+<p class="text-muted-light dark:text-muted-dark text-base font-normal leading-normal max-w-2xl mx-auto sm:text-lg">Explore a collection of articles and blogs covering a wide range of topics, designed to inform and inspire.</p>
+</div>
+<div class="flex justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-foreground-light text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Explore Articles</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-foreground-light dark:text-foreground-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Latest Posts</h2>
+<!-- ImageGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-subtle-light dark:bg-subtle-dark" data-alt="Abstract gradient from light gray to dark gray" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB37HHOfu3TrwcV4n6r5wsbsE9hcKUY_oWDrUAKxArYbVnXGVeutygYWTKMZaEHsTRm3vMAstf5tWzRT4uvgpTQH3jiW1FQDXC-bfgfI0Af7880Fb1XUthocylSpW_srWwGERGvrDadLV0PAs9TEI9JtABw9sBoOOYUhVKgs_GgyL51Db7U5h51vPE2D-BOcaDZ20ynwQ25uFEUEvGPw4EQsnS552HIgvqBGQw5eZdQ6v3ebV2UvDG8_kZ1iC0ID2meAhzTtN9EGZA");'></div>
+<div>
+<p class="text-primary text-sm font-bold leading-normal">Writing</p>
+<p class="text-foreground-light dark:text-foreground-dark text-base font-medium leading-normal">The Art of Storytelling</p>
+<p class="text-muted-light dark:text-muted-dark text-sm font-normal leading-normal">By Jane Doe • Oct 26, 2023</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-subtle-light dark:bg-subtle-dark" data-alt="Minimalist desk setup with a laptop and a plant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCT8YXSCDdmdMOFPtXYZ_tf8v2caBzdIWkG-5RXsdw5iYjNu5eLtQ5lF3TDWY1h0XbaXhhbA4vfYw_eXUJpaIK4XWxg_41evHSQJE3f4KkFSH3cOC-x61Ynq4Yfj1FCvwb5TlTtbfp36PNO8l2BZFFaUy0AJDkKaJ2bUzdQdileMQd8a98xUqDpntNYCtODfwa5cTew4plnu2gbuvQxcsEwU6p1NUZrIe7oYWUPzOMC6_-VfFiWghrAgBudgaHiP4sqY5Afym_mwCA");'></div>
+<div>
+<p class="text-primary text-sm font-bold leading-normal">Design</p>
+<p class="text-foreground-light dark:text-foreground-dark text-base font-medium leading-normal">Designing for Simplicity</p>
+<p class="text-muted-light dark:text-muted-dark text-sm font-normal leading-normal">By John Smith • Oct 25, 2023</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-subtle-light dark:bg-subtle-dark" data-alt="Person reading a book in a cozy armchair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBUyyhO_gZ-fqV1vSWPuW2z2zd4Vc56DHwSGCVqtsC_XYtYUA5qsWmGVrLAaByL3vxrjfK0vfQS5HflWyJiT8OP94P9pbPYDI-TzCfiW6QtkQ_P5HNVj_rh_TRG5DxZqbEb3HfrtXWj9RHjxsHg5YdinryNXy9lc1wG5BV_TCKwAgii_4tyijRfJBaVMHD73f4EQZSDFVOoAYNa59WR79ccYrzmBWfo3l_R-Q2Cx9QcLqk0K0hrJDOAYWKeQUpYDCCWa0MBRYqj8w");'></div>
+<div>
+<p class="text-primary text-sm font-bold leading-normal">Wellness</p>
+<p class="text-foreground-light dark:text-foreground-dark text-base font-medium leading-normal">A Guide to Mindful Reading</p>
+<p class="text-muted-light dark:text-muted-dark text-sm font-normal leading-normal">By Emily White • Oct 24, 2023</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-subtle-light dark:bg-subtle-dark" data-alt="Colorful paint splatters on a canvas" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaVjIQZ2CilNgGVphi_CbSw8kew4rUqOzK81tusmMuG5T5nI_vPHBlOmb4lwBJNTiUeRIyNv3lnAQNoAvbXTtglHrd2vysQL3X41Du1mj8YjZwuMjffa2tB9kuglUNwV1BdWU2M3coTVZNxTegJPuy7dEVFay4pL5XivbL0aPDut7DHeqeUEw2kUN1yvjiKOTYcxlwyxS-E172TNaxy7rqegcbCS3QXc6C4tDyP9ngAjXoACiB_my5kIW45LLSzxmSOwloeDQVyoM");'></div>
+<div>
+<p class="text-primary text-sm font-bold leading-normal">Art</p>
+<p class="text-foreground-light dark:text-foreground-dark text-base font-medium leading-normal">Finding Creativity in Chaos</p>
+<p class="text-muted-light dark:text-muted-dark text-sm font-normal leading-normal">By Chris Green • Oct 23, 2023</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-subtle-light dark:bg-subtle-dark" data-alt="Modern architectural building with geometric lines" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnaro_27LNh86NlMJPjYkBVhQ4_goecvWJeWsfBCkCYnI8Rj8CymmfIwx4hnGrt9TWzNP4-LyfPDWk24QqjylvrK_PlGU-FiuOmv3PduTfV5-oiEWPZ79TWL8aRMgNSvohsY3IRz3toJ6pZ-7vA-ArjBhTlJ_9UuSZdFVPsHRlC26JCvnct3HZyZKSYS41DsGtEAF1ht0kmc6yFloCcAi5FaizQoFVYgDS-zIg_pOVyUFpCYKE5DlAGWnq5xhUPBGEqhi75ECvpQU");'></div>
+<div>
+<p class="text-primary text-sm font-bold leading-normal">Travel</p>
+<p class="text-foreground-light dark:text-foreground-dark text-base font-medium leading-normal">Architectural Wonders of the Modern Age</p>
+<p class="text-muted-light dark:text-muted-dark text-sm font-normal leading-normal">By Sarah Brown • Oct 22, 2023</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-subtle-light dark:bg-subtle-dark" data-alt="A serene forest path with sunbeams" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2D4Yc9Su2HAlNqjUo2wJmC-OAMMVbEiYX8a1WuaHqVWk-GdPkVqTZMl6Ulm74ZD2aVAP6sMANduan4LjKCzzVYdVi8jSMMTBivdRkQ-p4_npbT4MMB6lL5OQoFDA0yoAViDgp0qKA5FBTcmHTfrXJOr4wZ_-OJ5goQQM6uOb5lLxZvNC6BXtWtuyQKgmAwyAhbepiNeHUomk6KpX_lFg2tdqhmr_f7799mmo9XcpGFGNx70TJ5BTdeP-CNM7VztCaPJ0bABc5ZAY");'></div>
+<div>
+<p class="text-primary text-sm font-bold leading-normal">Lifestyle</p>
+<p class="text-foreground-light dark:text-foreground-dark text-base font-medium leading-normal">Journeys Through Nature's Best</p>
+<p class="text-muted-light dark:text-muted-dark text-sm font-normal leading-normal">By Michael Black • Oct 21, 2023</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center p-4">
+<a class="flex size-10 items-center justify-center text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center rounded-full bg-primary text-foreground-light" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full text-foreground-light dark:text-foreground-dark hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full text-foreground-light dark:text-foreground-dark hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">3</a>
+<span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-muted-light dark:text-muted-dark">...</span>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full text-foreground-light dark:text-foreground-dark hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">8</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full text-foreground-light dark:text-foreground-dark hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">9</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center rounded-full text-foreground-light dark:text-foreground-dark hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">10</a>
+<a class="flex size-10 items-center justify-center text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto border-t border-solid border-subtle-light dark:border-subtle-dark py-8 px-4">
+<div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+<p class="text-sm text-muted-light dark:text-muted-dark">© 2024 Soperth. All Rights Reserved.</p>
+<div class="flex items-center gap-6">
+<a class="text-sm text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark" href="#">Terms of Service</a>
+<a class="text-sm text-muted-light dark:text-muted-dark hover:text-foreground-light dark:hover:text-foreground-dark" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
