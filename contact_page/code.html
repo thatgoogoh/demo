@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Page</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#221e10",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<div class="flex flex-1 justify-center px-4 py-5 sm:px-6 lg:px-8">
+<div class="flex w-full max-w-4xl flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200/80 px-4 py-4 dark:border-slate-800/80 sm:px-6">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl text-primary">
+                                public
+                            </span>
+<h2 class="text-lg font-bold tracking-tight">DATASCAPE</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#">Blog</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#">About</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="#">Contact</a>
+</nav>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-2xl text-slate-900 dark:text-white">
+                                menu
+                            </span>
+</button>
+</header>
+<main class="flex-1 py-12 sm:py-16 lg:py-20">
+<div class="mx-auto w-full max-w-2xl px-4 sm:px-6">
+<!-- PageHeading -->
+<div class="mb-10 text-center">
+<h1 class="font-display text-4xl font-black tracking-tighter text-slate-900 dark:text-white sm:text-5xl">Get in Touch</h1>
+<p class="mt-4 text-base leading-relaxed text-slate-500 dark:text-slate-400">
+                                    Have a question or a project in mind? Fill out the form below or send us an email. We'd love to hear from you.
+                                </p>
+</div>
+<!-- Contact Form -->
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<!-- Name TextField -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-slate-700 dark:text-slate-300">Name</p>
+<input class="form-input w-full rounded-lg border-slate-300 bg-background-light px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-background-dark dark:text-white dark:placeholder:text-slate-500 dark:focus:border-primary dark:focus:ring-primary" placeholder="Enter your name" type="text" value=""/>
+</label>
+<!-- Email TextField -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-slate-700 dark:text-slate-300">Email</p>
+<input class="form-input w-full rounded-lg border-slate-300 bg-background-light px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-background-dark dark:text-white dark:placeholder:text-slate-500 dark:focus:border-primary dark:focus:ring-primary" placeholder="Enter your email address" type="email" value=""/>
+</label>
+</div>
+<!-- Message TextField -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-slate-700 dark:text-slate-300">Your Message</p>
+<textarea class="form-textarea min-h-36 w-full resize-y rounded-lg border-slate-300 bg-background-light px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-background-dark dark:text-white dark:placeholder:text-slate-500 dark:focus:border-primary dark:focus:ring-primary" placeholder="Type your message here..."></textarea>
+</label>
+<!-- Submit Button -->
+<button class="mt-2 w-full rounded-lg bg-primary py-3 text-sm font-bold text-slate-900 transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark">
+                                    Send Message
+                                </button>
+</form>
+<!-- Alternative Contact Info -->
+<div class="mt-12 border-t border-slate-200/80 pt-8 text-center dark:border-slate-800/80">
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Other ways to connect</p>
+<div class="mt-4 flex items-center justify-center gap-6">
+<a class="flex items-center gap-2 text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="mailto:hello@datascape.com">
+<span class="material-symbols-outlined text-xl">
+                                            mail
+                                        </span>
+<span>hello@datascape.com</span>
+</a>
+<div class="flex items-center gap-4">
+<a class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary" data-alt="Twitter social media link" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary" data-alt="LinkedIn social media link" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200/80 py-6 dark:border-slate-800/80">
+<div class="mx-auto w-full max-w-4xl px-4 text-center sm:px-6">
+<p class="text-xs text-slate-500 dark:text-slate-400">© 2024 Datascape. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

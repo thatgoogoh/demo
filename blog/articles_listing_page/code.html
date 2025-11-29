@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog/Articles Listing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1c180d",
+                        "text-light": "#1c180d",
+                        "text-dark": "#f8f8f5",
+                        "subtle-light": "#9c8749",
+                        "subtle-dark": "#9c8749",
+                        "surface-light": "#f4f0e7",
+                        "surface-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-surface-light dark:border-surface-dark px-6 py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-text-light dark:text-text-dark">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Soperth</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Articles</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light dark:text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Subscribe</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 py-8 md:py-16">
+<div class="max-w-4xl mx-auto flex flex-col gap-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4 px-4 text-center">
+<div class="flex w-full flex-col gap-3">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tighter">Articles &amp; Insights</h1>
+<p class="text-base font-normal leading-normal text-subtle-light dark:text-subtle-dark">Explore our latest articles, stories and case studies.</p>
+</div>
+</div>
+<!-- Search and Filter Section -->
+<div class="flex flex-col md:flex-row gap-4 px-4 py-3">
+<!-- SearchBar -->
+<div class="flex-grow">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-surface-light dark:bg-surface-dark">
+<div class="text-subtle-light dark:text-subtle-dark flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-subtle-light dark:placeholder:text-subtle-dark px-2 text-base font-normal leading-normal" placeholder="Search articles..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips as Filters -->
+<div class="flex gap-2 py-1 overflow-x-auto">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-text-light dark:text-background-dark px-4">
+<p class="text-sm font-medium leading-normal">All</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors px-4">
+<p class="text-sm font-medium leading-normal">Technology</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors px-4">
+<p class="text-sm font-medium leading-normal">Design</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors px-4">
+<p class="text-sm font-medium leading-normal">Business</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors px-4">
+<p class="text-sm font-medium leading-normal">Productivity</p>
+</button>
+</div>
+</div>
+<!-- ImageGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Abstract swirling patterns of light and color representing AI concepts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1uVHvdCRW2ASN3E9CiA3D6g8EoEFhZ6XdmNMgB1RGR_G-9lendiX-Fl7S7_iGD4qfu8AZ2Tch0Y_eng-RqKON0WCP7zMxs_YHU8ShcxAgKWkilW9jZl-g7G11xK2X3OqqfAqaZyQPeT_n9X1sQxEQLUyhtp4hD_l_9y0nrpPAsfJwzOiL518YvZiMLYN8-Y-mEya3z6CAt_7JGIFudb6SDnk_SuxbjeoKgOLmrcg1mTBV0I6KoWnDEEuTHTOK6NFVWEHIvIdwPRk"/>
+</div>
+<div>
+<p class="text-base font-bold leading-normal">The Future of AI in Design</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark">How artificial intelligence is reshaping the creative process.</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark mt-1">Technology • 12 Jan 2024</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean, minimalist desk setup with a laptop and a plant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuqtsgNQrnfodlLKYJBjxb-TM6jncoHfaAGFmpz1KEDxboNQq_oJyt71dcMc2TX0-WQDp021HNTQD3N-zB5QPb68aDM6Je5EQ6Y09GF6sebBXpfYNe7pQJo45J-BsflniAF3feNJpijzEioZVe-hxJ1k4pvxAOXlfUFxGlYNlD34VU0ALJL9FoOsYUQOr_VWl1VtsVb90a-PuPMfRlGA8WwfVQylkPjPH3pcGPOI3W3pt-oBzYDIOzrjR4c9a_b-dMNYsBEubt3qE"/>
+</div>
+<div>
+<p class="text-base font-bold leading-normal">A Guide to Minimalist Web Aesthetics</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark">Principles and examples of creating clean, effective websites.</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark mt-1">Design • 10 Jan 2024</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A team collaborating in a modern office with sticky notes on a glass wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByqhgKRHlvmNFcysvApx29_yeXClHVzU6c02Grzsr6dU0QXOqFsuYOLAizQclFX_aED-cy--UrsiE6zyitjbLB4VpAMCm2Udp-CWpom842mZG5EtJxMTCKlKx5wJJrz1YQ6dsKUDFkycsnuNWTHWV-NMR5AwvLUFHw_GhGZ3Q_CG4rGLkMJN4uT-9fof-p8eYs7GCP-KRONM4BcidEgIsz8VcOFc4qgXZMoaH5HjWOsveGtrvG_ZJIliR10zPx8bXs4EzQ2a-xNv0"/>
+</div>
+<div>
+<p class="text-base font-bold leading-normal">Boosting Productivity with New Tools</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark">A roundup of the best software to streamline your workflow.</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark mt-1">Productivity • 8 Jan 2024</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A presenter pointing at a chart during a business meeting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_-NSJcu7imx29oyXbh9EIL0GFLeoW7M_pzQOFln6FROWHwSplUkLojT8Vfo2k_gx_RXM6NIT02ztJUMRuyDEGnGfDAbPn89vgjM1cEkwKLQkONNFxmrrsynVE-L9ygUBeLqcCHVgNp3bWXiSS0w1pBm32BzQhoeIVerUMwVI3Y10548NO_NzyZgMzpaSnHtjrGqYABc7zgITHjR892oRK_zWi-ryUrU1bMiQ64FBBZ1saoH7iUXVreuNgSeztkcU0hn0hT2jMXE0"/>
+</div>
+<div>
+<p class="text-base font-bold leading-normal">Navigating the Tech Industry's Evolution</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark">Key trends and predictions for the upcoming year.</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark mt-1">Technology • 5 Jan 2024</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Colorful sticky notes arranged on a board, representing creative brainstorming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtlkwu6ieOiIqk_lypEV4hT3iPhL-IaLxhhAdBWvWXukOxDG0wjwZ2HRMqNw5rONbMSQfvlSD8Z4Gm2TShk2QdmxpO0-Jp_b278ykfGeHvDgTQUo6ky16EqljqS3PRWarVPGp-_PlRqKsuiSBKBypRkqkSspjzeGHzuYzxAR3Tl3GrVi8rpsWvBodEPLUYlM4FvixSffpJFP0np9PcKLVnmfdTX_zx2IgLF7cqg4cNvqu7sTEVFCRBrTIxJmxZ2zwWfaoUVZk_JL4"/>
+</div>
+<div>
+<p class="text-base font-bold leading-normal">Design Thinking for Problem Solving</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark">Applying a human-centered approach to innovate.</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark mt-1">Design • 2 Jan 2024</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A person holding a small plant in their hands, symbolizing growth and sustainability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYcXc4vUolrOHS-z6ungTmQOyEnssjUTlBi--htUlFzG66IT2nzAfxNnzkbDGCRx-O9MiN9NaGp8h-zLe9iDUM5Y16VsbWV0qDisac68Q8h8fyhfFdb6gNDjYPkLn7A3m1GR9LnRQqiDI6L6b7X7uUec7jsCaor9sTOFoPQN7IfsTPEjRdrhkyCYx8tuM9rbII88OQqcQbSqQk4e8dPWmlXuUfC0x7NklAL3CPvN8tUYjdSaiqtxa5nXwF92AcXezwzyXNTdaF9mM"/>
+</div>
+<div>
+<p class="text-base font-bold leading-normal">Sustainable Business Practices for 2024</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark">How companies can adopt eco-friendly strategies for growth.</p>
+<p class="text-sm font-normal leading-normal text-subtle-light dark:text-subtle-dark mt-1">Business • 1 Jan 2024</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 p-4 mt-8">
+<button class="flex items-center justify-center size-10 rounded-lg border border-surface-light dark:border-surface-dark bg-surface-light dark:bg-surface-dark hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-primary text-text-light dark:text-background-dark font-bold">1</button>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors">2</button>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors">3</button>
+<span class="text-subtle-light dark:text-subtle-dark">...</span>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors">8</button>
+<button class="flex items-center justify-center size-10 rounded-lg border border-surface-light dark:border-surface-dark bg-surface-light dark:bg-surface-dark hover:bg-primary/20 dark:hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article Detail Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#fcfbf8",
+                        "background-dark": "#1c180d",
+                        "text-light": "#1c180d",
+                        "text-dark": "#fcfbf8",
+                        "text-muted-light": "#9c8749",
+                        "text-muted-dark": "#a39d8b",
+                        "border-light": "#f4f0e7",
+                        "border-dark": "#3a3321",
+                        "surface-light": "#f8f8f5",
+                        "surface-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"],
+                        "body": ["Lora", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Progress Bar -->
+<div class="fixed top-0 left-0 right-0 h-1.5 z-50">
+<div class="bg-primary/30 dark:bg-primary/20 h-full">
+<div class="h-full bg-primary" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-text-light dark:text-text-dark">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs><clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">SOPERTH</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Articles</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Subscribe</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="p-2">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+<article class="max-w-3xl mx-auto">
+<!-- Article Header -->
+<header class="text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-4">The Art of Minimalist Web Design</h1>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm md:text-base font-normal leading-normal">By Jane Doe • Published on October 26, 2023 • 8 min read</p>
+</header>
+<!-- Hero Image -->
+<figure class="mb-12">
+<img class="w-full h-auto object-cover rounded-xl aspect-video" data-alt="A minimalist landscape with rolling fog over mountains at sunrise, representing clarity and focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-Zi6j5o8xaq53S5vMwIGoNVErcfPl4Tnns0EtRV3hT1rlHAgmRzKk7X76BNRLrr0kVHvzWDP_mdv0s4soBFXbDTzjXX16kY3EXXAQ6yu-SuRCeJqd4J-97JuvethGNXUEoglLb_imv4p57nCFGIp1f6ih9VlC-HQtPUw3jwpCmQzppIO_sjefEWUMTqrg-qiekkON0fdU-sfgbU3pINAOjXOFOLmMCKMLo9LCNAAQRTnFeQU168xlvIzDPmGWLVcOCTXh2fAWX0"/>
+</figure>
+<!-- Article Body -->
+<div class="prose prose-lg dark:prose-invert max-w-none font-body text-text-light dark:text-text-dark prose-headings:font-display prose-headings:font-bold prose-headings:text-text-light dark:prose-headings:text-text-dark prose-p:leading-relaxed prose-a:text-primary prose-blockquote:border-primary prose-blockquote:text-text-muted-light dark:prose-blockquote:text-text-muted-dark">
+<p>In a world saturated with digital noise, minimalist web design emerges not just as an aesthetic choice, but as a philosophy centered on clarity and purpose. It's about stripping away the superfluous to elevate what truly matters: the content. By embracing white space, clean typography, and a deliberate color palette, designers can create experiences that are not only beautiful but also highly functional and user-centric.</p>
+<h2>The Core Principles</h2>
+<p>Minimalism in web design is guided by a few core principles. First and foremost is "less is more." Every element on the page must serve a purpose. If it doesn't contribute to the user's understanding or journey, it's a candidate for removal. This approach reduces cognitive load, allowing users to focus on their primary goal, whether it's reading an article, purchasing a product, or contacting a service.</p>
+<blockquote>"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." - Antoine de Saint-Exupéry</blockquote>
+<h3>The Role of Typography and Space</h3>
+<p>Typography becomes the voice of the website. In a minimalist design, fonts are chosen with extreme care. A clean, modern sans-serif for headings paired with a highly readable serif for body text can create a harmonious and elegant reading experience. Generous white space (or negative space) is equally crucial. It's the canvas that allows the content to breathe, guiding the user's eye and creating a sense of calm and order.</p>
+<ul>
+<li><strong>Clarity:</strong> Reduces visual clutter, making information easier to digest.</li>
+<li><strong>Focus:</strong> Directs user attention to the most important content and calls-to-action.</li>
+<li><strong>Elegance:</strong> Creates a sophisticated and timeless aesthetic.</li>
+<li><strong>Performance:</strong> Fewer elements often mean faster loading times, improving user experience and SEO.</li>
+</ul>
+<p>Ultimately, the art of minimalist web design is a practice in restraint and intentionality. It challenges designers to be more thoughtful, more precise, and more focused on the user's needs. The result is a digital space that feels less like a billboard and more like a quiet, well-lit room for conversation and discovery.</p>
+</div>
+<!-- Social Share Buttons -->
+<div class="border-y border-border-light dark:border-border-dark mt-12 py-4 flex flex-wrap items-center justify-center gap-2">
+<a class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-surface-light dark:hover:bg-surface-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark !text-[20px]">share</span>
+<p class="text-text-muted-light dark:text-text-muted-dark text-[13px] font-bold leading-normal tracking-[0.015em]">Share</p>
+</a>
+<a class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-surface-light dark:hover:bg-surface-dark transition-colors" href="#">
+<svg class="bi bi-twitter-x text-text-muted-light dark:text-text-muted-dark" fill="currentColor" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75ZM11.48 13.812h1.22l-7.48-8.811H3.993z"></path>
+</svg>
+<p class="text-text-muted-light dark:text-text-muted-dark text-[13px] font-bold leading-normal tracking-[0.015em]">Post</p>
+</a>
+<a class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-surface-light dark:hover:bg-surface-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark !text-[20px]">link</span>
+<p class="text-text-muted-light dark:text-text-muted-dark text-[13px] font-bold leading-normal tracking-[0.015em]">Copy Link</p>
+</a>
+</div>
+<!-- Author Bio Card -->
+<div class="mt-12 bg-surface-light dark:bg-surface-dark p-8 rounded-lg">
+<div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6">
+<img class="w-24 h-24 rounded-full object-cover shrink-0" data-alt="Headshot of Jane Doe, a smiling woman with glasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7LGqXv4vva_s2q6HkOQuBUEzIcDbIpzg0_kx5IcFjueu7FN92lYEB8YMUpDYu4ikA50zsQXfhbocww2daAFV-0KGI2cudVGeZq4Wl6uwkv8_x1h6O_a4Ja-kr_xevgvzIlWBdUbTajKL20obxFdW44i4PgGPqcrOyiTPzdivBJeHBTeRdTQ85rSEaUzqRByzyuBqe2FsCLzZT4vtl9uUCPhRESRdxqYJ2VCPOT9qO5En4c5cV3c4oL1x8qb7XjtYLOu_aqaq1zM4"/>
+<div>
+<p class="text-sm font-bold text-text-muted-light dark:text-text-muted-dark tracking-wide uppercase">Written By</p>
+<h3 class="text-2xl font-bold mt-1 mb-2">Jane Doe</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">Jane is a principal designer at Soperth with over a decade of experience in creating user-centric digital products. She has a passion for typography and believes in the power of simplicity to solve complex problems.</p>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Related Articles Section -->
+<section class="bg-surface-light dark:bg-surface-dark py-16 md:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold">Related Articles</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark mt-4">Explore more topics on design and creativity.</p>
+</div>
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Article Card 1 -->
+<div class="flex flex-col group">
+<a class="block overflow-hidden rounded-lg mb-4" href="#">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Colorful abstract geometric shapes on a light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYJeA-foCG2t8pnehfhHz-Gsz-eJi0ALpK01q7aVsaw-tfVln37h_wAaSSH1elre74Q263PZUU6SRqyqOEzN9sJ9Ch-wZpo2q6D9etXSfdMloOulIodydHA98jZrfxPiiR2Rmg_Wbf5CMQXXi7RLlpJgh9aPcBOVVBZG9KC2JW4rKzbiVl3sLksl6o5QetMCHKSZ5y5wFiB__XU_UAR23jsODoeIJjZjh36XCH_R5neDdvVqQ2Tzwtvrca5qRztQWd6WrM64AiqL4"/>
+</a>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-1">UI/UX Design</p>
+<h3 class="text-xl font-bold leading-snug mb-2">
+<a class="hover:text-primary transition-colors" href="#">The Psychology of Color in Branding</a>
+</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Discover how color influences perception and builds brand identity.</p>
+</div>
+<!-- Article Card 2 -->
+<div class="flex flex-col group">
+<a class="block overflow-hidden rounded-lg mb-4" href="#">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean, modern desk setup with a laptop, monitor, and notebook." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8pn-E9UJ79V44gJU0wP7UGnmQ0dK5bbZyCllFkpQ1U9fWUh1mwZYFayjeauSlJrt9135CbDkhrj1embSKY0zi-PzexvV1hIdN7BkVyIb4xvjTTVsH1vnPnkYs_g-xb-Fq6FEi5Z8nS0CAberCNFonz0fKjYsEbqemRcTa8oNuF1lYKcRbgSZUsVZQPL1L8CdlXt38UnN1k5tf0-UdfwoPWZQ1c_RKdJc8DKzRxPxL86VjneohTJU4I8evwJ5EwaiXbYqS-lbXn-8"/>
+</a>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-1">Productivity</p>
+<h3 class="text-xl font-bold leading-snug mb-2">
+<a class="hover:text-primary transition-colors" href="#">Crafting the Perfect Digital Workflow</a>
+</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Tips and tools for streamlining your creative process and staying focused.</p>
+</div>
+<!-- Article Card 3 -->
+<div class="flex flex-col group">
+<a class="block overflow-hidden rounded-lg mb-4" href="#">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A diverse group of people collaborating around a table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDon_pm8xCLsTKp5Iy4KKbKlMziMkzsHVNf5LzvmOHVGmxu7nPoLCJ71T23289Qgwj9AbEb9wyUfTPijvxAQ-bKnQMMGYTSzw0CEhMcKLz0QmV7VpBRHOFAo2AghSXxQxiKSKQVfwAo3h-Gs5M6dUjhzRAHDmv_jqqCCjTzvMjmawdT-DNO1Q22KM97KguAXQ8_Xf6cftguriarJ0U7FzcZcrlfABfRZS9FMSpx7KYNQcZeWSFgZxl_qbEbELFcHiZ47YOCKcfM_lY"/>
+</a>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-1">Collaboration</p>
+<h3 class="text-xl font-bold leading-snug mb-2">
+<a class="hover:text-primary transition-colors" href="#">Design Thinking for Non-Designers</a>
+</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">A practical guide to applying design principles in any team.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">© 2024 Soperth. All Rights Reserved.</p>
+<div class="flex items-center gap-6">
+<a class="text-sm text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-sm text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
